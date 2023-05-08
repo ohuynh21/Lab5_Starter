@@ -52,13 +52,13 @@ function init() {
     // speak it
     instance.speak(utterThis);
     // change the image while speaking
-    utterThis.onstart = function() {
+    setInterval(function(){
+      if (speechSynthesis.speaking == true){
       face.setAttribute("src", "assets/images/smiling-open.png");
-    };
-    
-    utterThis.onend = function() {
-      face.setAttribute("src", "assets/images/smiling.png");
-    };
-  }
-  )
+      }
+      else {
+        face.setAttribute("src", "assets/images/smiling.png");
+      };
+    },1);
+  });
 }
