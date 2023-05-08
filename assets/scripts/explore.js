@@ -54,7 +54,7 @@ function init() {
     // change the image while speaking
     setInterval(function(){
       if (speechSynthesis.speaking == true){
-      face.setAttribute("src", "assets/images/smiling-open.png");
+        face.setAttribute("src", "assets/images/smiling-open.png");
       }
       else {
         face.setAttribute("src", "assets/images/smiling.png");
